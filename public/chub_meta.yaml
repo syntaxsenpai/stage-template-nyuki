@@ -14,10 +14,12 @@ position: 'ADJACENT'
 
 # Tags for discoverability
 tags:
-  - 'Expression Pack'
-  - 'Nyuki'
-  - 'Expressions'
-  - 'Visual'
+ - 'Extension'
+ - 'Stage'
+ - 'Expression Pack'
+ - 'Nyuki'
+ - 'Expressions'
+ - 'Visual'
 
 # The schema of any user-supplied config.
 config_schema:
@@ -47,3 +49,5 @@ is_anonymous: false
 
 # Self-explanatory.
 ratings_disabled: false
+github_path: 'https://github.com/syntaxsenpai/stage-template'
+
