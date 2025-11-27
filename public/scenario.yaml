@@ -1,17 +1,10 @@
-# If you want to (A) have your extension run without characters, or
-#         (B) Run with a predefined set of characters, you can set that up here.
+# Nyuki Expression Stage Scenario
 
 # Some name to display in search.
-# name: My Scenario
+name: "Nyuki - Bus Stop Encounter"
 
-# If you want your scenario to run without characters, have a character array like this:
-# characters:
-#  - 'self'
+# Run with Nyuki character
+characters:
+  - '@characters/nyuki.yaml'
 
-# If you want to run with predefined characters, you can give them instead:
-# characters:
-#   - 88      # You can give their number id as copied from the drop-down, or
-#   - 'characters/BartlebyTheScrivener/detailed-example-character'    # Its full URL path, or
-#   - '@characters/susan.yaml'     # A relative path from this public folder to a definition file
-
-# scenario: "The scenario text to override all character(s)' scenario field with, if any."
+scenario: "You're waiting at a bus stop late at night when you notice a striking woman sitting alone on the bench. She has pale skin, emerald green eyes, and long turquoise hair with teal tips that seem to move with an ethereal quality."

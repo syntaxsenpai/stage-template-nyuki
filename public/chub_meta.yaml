@@ -1,75 +1,54 @@
-# All of these fields are optional, as is this file itself,
-#   in which case these values can be managed in the UI.
+# Nyuki Expression Stage Configuration
 
 # The name of the stage.
-# project_name: "Stage Template"
+project_name: "Nyuki Expressions"
 
 # A short tagline to show in search.
-# tagline: "A base template for all stages."
+tagline: "Facial expression pack for Nyuki - the cynical tsundere"
 
 # 'PUBLIC', 'PRIVATE', or 'UNLISTED'.
-# visibility: 'PUBLIC'
+visibility: 'PUBLIC'
 
 # 'ADJACENT' | 'NONE' | 'COVER' | 'FULLSCREEN'
 # 'ADJACENT' is default. The frame will display on the side of the
 #   chat on desktop and above/in the top half of the chat on mobile.
-# 'NONE' will not display, only run.
-# 'COVER' will, indeed, cover the chat history completely,
-#   but leave the text input box.
-# 'FULLSCREEN' will make nothing below the header bar
-#   show except for your stage.
-# position: 'ADJACENT'
+position: 'ADJACENT'
 
-# Self-explanatory.
-# tags:
-#  - 'Stage'
-#  - 'Admin'
-#  - 'Template'
-#  - 'Base'
+# Tags for discoverability
+tags:
+  - 'Expression Pack'
+  - 'Nyuki'
+  - 'Expressions'
+  - 'Visual'
 
 # The schema of any user-supplied config.
-# If your stage requires a configuration but has no
-#   defined schema, it won't work.
 config_schema:
   type: object
   properties:
-    health:
-      type: integer
-      default: 100
+    defaultExpression:
+      type: string
+      default: "neutral"
+      description: "The default expression to show when no emotion is detected"
+    imageSize:
+      type: string
+      enum: ["small", "medium", "large", "full"]
+      default: "large"
+      description: "Size of the expression image"
 
 # The schema of the state that you store.
-# This isn't needed even if you do store state,
-#   and is here more for future use cases to
-#   optimize storage.
 state_schema:
-  init:
-    type: object
-    properties:
-      grid:
-        type: string
   message:
     type: object
     properties:
-      angry:
-        type: boolean
-        default: true
-  chat:
-    type: object
-    properties:
-      visited:
-        type: array
-        items:
-          type: integer
+      currentExpression:
+        type: string
+        default: "neutral"
 
 # Whether to publish as 'Anonymous' instead of under your username.
-# is_anonymous: false
+is_anonymous: false
 
 # Self-explanatory.
-# ratings_disabled: false
-
-# This is here for future cases where ex. you need user secrets,
-#    but currently does nothing.
-# permissions:
+ratings_disabled: false
 
 # extension_id is automatically generated on push with a new project;
 #    you should not make or set this value.
