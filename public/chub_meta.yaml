@@ -10,8 +10,6 @@ tagline: "Facial expression pack for Nyuki - the cynical tsundere"
 visibility: 'PUBLIC'
 
 # 'ADJACENT' | 'NONE' | 'COVER' | 'FULLSCREEN'
-# 'ADJACENT' is default. The frame will display on the side of the
-#   chat on desktop and above/in the top half of the chat on mobile.
 position: 'ADJACENT'
 
 # Tags for discoverability
@@ -49,8 +47,3 @@ is_anonymous: false
 
 # Self-explanatory.
 ratings_disabled: false
-
-# extension_id is automatically generated on push with a new project;
-#    you should not make or set this value.
-# github_path will be added if it does not exist. It is the URL of the repo.
-
